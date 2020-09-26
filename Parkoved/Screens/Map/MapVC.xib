@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapVC" customModule="Parkoved" customModuleProvider="target">
             <connections>
+                <outlet property="parkMap" destination="1a8-1i-a4C" id="4xT-UD-VFx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,12 +25,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1a8-1i-a4C">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </mapView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="5YY-rP-8Bq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9tT-s3-7l1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1a8-1i-a4C" secondAttribute="trailing" id="JcF-GM-J07"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1a8-1i-a4C" secondAttribute="bottom" id="bAA-W9-FSX"/>
                 <constraint firstItem="5YY-rP-8Bq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="irY-E4-Az8"/>
+                <constraint firstItem="1a8-1i-a4C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kii-EC-k77"/>
+                <constraint firstItem="1a8-1i-a4C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nmu-2m-bEr"/>
             </constraints>
             <point key="canvasLocation" x="139" y="90"/>
         </view>

@@ -16,6 +16,8 @@ class ProfileVC: FrameVC {
 
     @IBAction func exitToAuth(_ sender: Any) {
         PHONE_NUMBER = nil
+        AUTH_TOKEN = nil
+        UID = nil
         self.navigationController?.popToRootViewController(animated: true)
     }
 }

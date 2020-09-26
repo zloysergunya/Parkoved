@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
 //        window?.rootViewController = AuthVC(nibName: "AuthVC", bundle: nil)
         window?.rootViewController = UINavigationController(rootViewController: AuthVC(nibName: "AuthVC", bundle: nil))
-//        window?.rootViewController = UINavigationController(rootViewController: TabBarController(nibName: "TabBarController", bundle: nil))
         window?.makeKeyAndVisible()
         
         return true

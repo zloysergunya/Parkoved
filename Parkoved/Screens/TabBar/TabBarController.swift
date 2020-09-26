@@ -14,12 +14,13 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomBarController = self
-        title = "ЦЕНТРАЛЬНЫЙ ПАРК"
+        title = "СОЧИ ПАРК"
         createTabBarController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
     func createTabBarController() {        

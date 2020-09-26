@@ -20,9 +20,6 @@ class AuthVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneField.delegate = self
-//        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.navigationBar.backgroundColor = .white
-        hideInterface()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,23 +27,27 @@ class AuthVC: UIViewController {
         step = 0
         restartScreen()
         hideInterface()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        if PHONE_NUMBER != nil {
+        if AUTH_TOKEN != nil {
             let vc = TabBarController(nibName: "TabBarController", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
-//            vc.modalPresentationStyle = .fullScreen
-//            self.present(vc, animated: true, completion: nil)
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func hideInterface() {
-        titleLabel.isHidden = PHONE_NUMBER != nil
-        subTitleLabel.isHidden = PHONE_NUMBER != nil
-        phoneField.isHidden = PHONE_NUMBER != nil
-        enterButton.isHidden = PHONE_NUMBER != nil
+        titleLabel.isHidden = AUTH_TOKEN != nil
+        subTitleLabel.isHidden = AUTH_TOKEN != nil
+        phoneField.isHidden = AUTH_TOKEN != nil
+        enterButton.isHidden = AUTH_TOKEN != nil
         changeNumberButton.isHidden = true
     }
     
@@ -75,19 +76,55 @@ class AuthVC: UIViewController {
         }
         if step == 0 {
             PHONE_NUMBER = phoneField.text?.applyPatternOnNumbers(pattern: "+###########", replacmentCharacter: "#")
-            step = 1
+            let params = ["phone": PHONE_NUMBER]
+            authRegister(params as [String:Any])
         } else if step == 1 {
-            let vc = TabBarController(nibName: "TabBarController", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
-//            vc.modalPresentationStyle = .fullScreen
-//            self.present(vc, animated: true, completion: nil)
+            let params = ["phone": PHONE_NUMBER,
+                          "code": phoneField.text ?? ""]
+            authConfirm(params as [String:Any])
         }
-        restartScreen()
     }
     
     @IBAction func changeNumber(_ sender: Any) {
         step = 0
         restartScreen()
+    }
+}
+
+extension AuthVC {
+    func authRegister(_ params: [String: Any]) {
+        HTTPRequest(SERVER_URL + "auth/request", params: params, completion: { data, status in
+            if let success = (data?.json as? [String: Any])?["success"] as? Bool {
+                if success {
+                    self.step = 1
+                    self.restartScreen()
+                }
+            }
+        })
+    }
+    
+    func authConfirm(_ params: [String: Any]) {
+        HTTPRequest(SERVER_URL + "auth/confirm", params: params, completion: { data, status in
+            if status < 399 {
+                if let token = (data?.json as? [String: Any])?["token"] as? String {
+                    AUTH_TOKEN = token
+                    self.getUserInfo()
+                    let vc = TabBarController(nibName: "TabBarController", bundle: nil)
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+        })
+    }
+    
+    func getUserInfo() {
+        let params = ["token": AUTH_TOKEN]
+        HTTPRequest(SERVER_URL + "users/me", method: "GET", params: params, completion: { data, status in
+            if status < 399 {
+                if let uid = (data?.json as? [String: Any])?["uid"] as? String {
+                    UID = uid
+                }
+            }
+        })
     }
 }
 

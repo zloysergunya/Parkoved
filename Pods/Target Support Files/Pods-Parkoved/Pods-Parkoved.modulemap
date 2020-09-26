@@ -1,0 +1,6 @@
+framework module Pods_Parkoved {
+  umbrella header "Pods-Parkoved-umbrella.h"
+
+  export *
+  module * { export * }
+}

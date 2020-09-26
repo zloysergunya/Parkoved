@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TicketDetailsVC" customModule="Parkoved" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsX-rU-TWX" userLabel="ticketView" customClass="CornerView" customModule="Parkoved" customModuleProvider="target">
+                    <rect key="frame" x="16" y="60" width="382" height="422"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ГОДЕН ДО" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shu-ao-Eg1">
+                            <rect key="frame" x="302" y="10" width="65" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="juu-gB-PJM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="11"/>
+                            <color key="textColor" name="ticketTextGreen"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/10/2020" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJj-bk-D1b">
+                            <rect key="frame" x="237" y="23" width="130" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="e3s-Me-ofJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВРЕМЯ РАБОТЫ" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBR-X3-qvW">
+                            <rect key="frame" x="277" y="59" width="90" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="xkl-1R-BV4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="11"/>
+                            <color key="textColor" name="ticketTextGreen"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00-20:00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qd-Uw-Fsi">
+                            <rect key="frame" x="167" y="72" width="200" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="vQr-9L-SzP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Карусель" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rax-6A-Efv">
+                            <rect key="frame" x="15" y="10" width="207" height="29"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ОГРАНИЧЕНИЕ" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAY-5M-5y7">
+                            <rect key="frame" x="15" y="61" width="81.5" height="13.5"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="11"/>
+                            <color key="textColor" name="ticketTextGreen"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0+" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XmJ-5d-iNt">
+                            <rect key="frame" x="15" y="74.5" width="137" height="21.5"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0C6-Mn-pht">
+                            <rect key="frame" x="15" y="115" width="33.5" height="35"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqD-8g-wsK" customClass="CornerView" customModule="Parkoved" customModuleProvider="target">
+                            <rect key="frame" x="-5" y="105" width="10" height="10"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="2Nc-uv-7oU"/>
+                                <constraint firstAttribute="width" constant="10" id="nFf-EB-6PE"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUX-kx-623" customClass="CornerView" customModule="Parkoved" customModuleProvider="target">
+                            <rect key="frame" x="377" y="105" width="10" height="10"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="JmE-Xg-SW6"/>
+                                <constraint firstAttribute="height" constant="10" id="pbO-5t-a1M"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCode" translatesAutoresizingMaskIntoConstraints="NO" id="MEP-Tm-0xV">
+                            <rect key="frame" x="65" y="184" width="252" height="213"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="252" id="rRg-Wg-YCe"/>
+                                <constraint firstAttribute="height" constant="213" id="xCg-PM-VTx"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="использование" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLw-0E-iga">
+                            <rect key="frame" x="58.5" y="115" width="100" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="QuQ-RO-qhL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="ticketColorGreen"/>
+                    <constraints>
+                        <constraint firstItem="XmJ-5d-iNt" firstAttribute="top" secondItem="tAY-5M-5y7" secondAttribute="bottom" id="3ii-VK-v7b"/>
+                        <constraint firstItem="RJj-bk-D1b" firstAttribute="leading" secondItem="Rax-6A-Efv" secondAttribute="trailing" constant="15" id="5af-PI-Hj3"/>
+                        <constraint firstItem="tAY-5M-5y7" firstAttribute="top" secondItem="Rax-6A-Efv" secondAttribute="bottom" constant="22" id="5wp-cg-Zih"/>
+                        <constraint firstItem="MEP-Tm-0xV" firstAttribute="top" secondItem="0C6-Mn-pht" secondAttribute="bottom" constant="34" id="7Yj-qO-ei2"/>
+                        <constraint firstAttribute="trailing" secondItem="shu-ao-Eg1" secondAttribute="trailing" constant="15" id="BPP-3x-I8k"/>
+                        <constraint firstItem="Rax-6A-Efv" firstAttribute="top" secondItem="jsX-rU-TWX" secondAttribute="top" constant="10" id="CNz-hy-j9M"/>
+                        <constraint firstItem="0C6-Mn-pht" firstAttribute="top" secondItem="XmJ-5d-iNt" secondAttribute="bottom" constant="18" id="CdV-rc-nQy"/>
+                        <constraint firstItem="nLw-0E-iga" firstAttribute="top" secondItem="0C6-Mn-pht" secondAttribute="top" id="Ff4-Pn-AXw"/>
+                        <constraint firstAttribute="trailing" secondItem="RJj-bk-D1b" secondAttribute="trailing" constant="15" id="FfS-lB-1Gf"/>
+                        <constraint firstItem="RJj-bk-D1b" firstAttribute="top" secondItem="shu-ao-Eg1" secondAttribute="bottom" id="Hxy-27-GTh"/>
+                        <constraint firstAttribute="trailing" secondItem="MEP-Tm-0xV" secondAttribute="trailing" constant="65" id="Mkn-Az-Tce"/>
+                        <constraint firstItem="bqD-8g-wsK" firstAttribute="top" secondItem="jsX-rU-TWX" secondAttribute="top" constant="105" id="NEx-i5-QeR"/>
+                        <constraint firstItem="0qd-Uw-Fsi" firstAttribute="leading" secondItem="XmJ-5d-iNt" secondAttribute="trailing" constant="15" id="OIs-Fc-gSN"/>
+                        <constraint firstItem="bqD-8g-wsK" firstAttribute="leading" secondItem="jsX-rU-TWX" secondAttribute="leading" constant="-5" id="P0a-yl-ZFf"/>
+                        <constraint firstItem="tAY-5M-5y7" firstAttribute="leading" secondItem="jsX-rU-TWX" secondAttribute="leading" constant="15" id="P0k-Za-o1a"/>
+                        <constraint firstItem="shu-ao-Eg1" firstAttribute="top" secondItem="jsX-rU-TWX" secondAttribute="top" constant="10" id="SOu-aT-CmX"/>
+                        <constraint firstItem="XmJ-5d-iNt" firstAttribute="leading" secondItem="jsX-rU-TWX" secondAttribute="leading" constant="15" id="TSB-dE-Zh0"/>
+                        <constraint firstItem="WBR-X3-qvW" firstAttribute="top" secondItem="RJj-bk-D1b" secondAttribute="bottom" constant="10" id="TWc-3E-Vjb"/>
+                        <constraint firstItem="Rax-6A-Efv" firstAttribute="leading" secondItem="jsX-rU-TWX" secondAttribute="leading" constant="15" id="XsU-jX-BuE"/>
+                        <constraint firstItem="nUX-kx-623" firstAttribute="top" secondItem="jsX-rU-TWX" secondAttribute="top" constant="105" id="cbp-qb-4Vo"/>
+                        <constraint firstItem="nLw-0E-iga" firstAttribute="bottom" secondItem="0C6-Mn-pht" secondAttribute="bottom" id="gs5-gc-wWz"/>
+                        <constraint firstItem="0qd-Uw-Fsi" firstAttribute="top" secondItem="WBR-X3-qvW" secondAttribute="bottom" id="ian-CK-akW"/>
+                        <constraint firstItem="MEP-Tm-0xV" firstAttribute="leading" secondItem="jsX-rU-TWX" secondAttribute="leading" constant="65" id="kVf-gq-Jp2"/>
+                        <constraint firstItem="0C6-Mn-pht" firstAttribute="leading" secondItem="jsX-rU-TWX" secondAttribute="leading" constant="15" id="krP-Bt-VYg"/>
+                        <constraint firstAttribute="bottom" secondItem="MEP-Tm-0xV" secondAttribute="bottom" constant="25" id="oSh-ws-W4Y"/>
+                        <constraint firstAttribute="height" constant="422" id="oom-ZU-h76"/>
+                        <constraint firstAttribute="trailing" secondItem="nUX-kx-623" secondAttribute="trailing" constant="-5" id="qXI-ku-oMb"/>
+                        <constraint firstAttribute="trailing" secondItem="0qd-Uw-Fsi" secondAttribute="trailing" constant="15" id="r8e-TM-DGs"/>
+                        <constraint firstItem="nLw-0E-iga" firstAttribute="leading" secondItem="0C6-Mn-pht" secondAttribute="trailing" constant="10" id="xqh-j4-SvP"/>
+                        <constraint firstAttribute="trailing" secondItem="WBR-X3-qvW" secondAttribute="trailing" constant="15" id="ygM-XZ-Hg1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nfcPay" translatesAutoresizingMaskIntoConstraints="NO" id="kll-I0-ufX">
+                    <rect key="frame" x="155" y="530" width="104" height="65"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поднесите к терминалу" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpa-Et-QWM">
+                    <rect key="frame" x="15" y="610" width="384" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wpa-Et-QWM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="0e8-a6-5BI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kll-I0-ufX" secondAttribute="trailing" constant="155" id="1QT-5c-Dq0"/>
+                <constraint firstItem="kll-I0-ufX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="155" id="F4U-Ky-feL"/>
+                <constraint firstItem="wpa-Et-QWM" firstAttribute="top" secondItem="kll-I0-ufX" secondAttribute="bottom" constant="15" id="FEF-3a-alt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wpa-Et-QWM" secondAttribute="trailing" constant="15" id="bGT-nh-9CF"/>
+                <constraint firstItem="jsX-rU-TWX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cdm-b1-aqC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jsX-rU-TWX" secondAttribute="trailing" constant="16" id="g87-5c-GRP"/>
+                <constraint firstItem="kll-I0-ufX" firstAttribute="top" secondItem="jsX-rU-TWX" secondAttribute="bottom" constant="48" id="qOu-FF-Bfg"/>
+                <constraint firstItem="jsX-rU-TWX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="qcX-y1-9UY"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.37681159420291" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nfcPay" width="65" height="65"/>
+        <image name="qrCode" width="213" height="213"/>
+        <namedColor name="ticketColorGreen">
+            <color red="0.45098039215686275" green="0.84313725490196079" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ticketTextGreen">
+            <color red="0.27058823529411763" green="0.50588235294117645" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

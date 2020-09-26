@@ -18,7 +18,11 @@ class TabBarController: UITabBarController {
         createTabBarController()
     }
     
-    func createTabBarController() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
+    func createTabBarController() {        
         let eventsVC = EventsVC(nibName: "EventsVC", bundle: nil)
         eventsVC.tabBarItem = UITabBarItem.init(title: "События", image: UIImage.init(systemName: "calendar"), tag: 0)
         let mapVC = MapVC(nibName: "MapVC", bundle: nil)
@@ -30,5 +34,4 @@ class TabBarController: UITabBarController {
         
         viewControllers = [eventsVC, mapVC, ticketsVC, profileVC]
     }
-
 }

@@ -18,18 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProfileVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6z-Qh-J2N">
-                    <rect key="frame" x="172" y="437.5" width="70" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQf-Ik-i3y">
+                    <rect key="frame" x="175" y="433" width="64" height="30"/>
+                    <state key="normal" title="ProfileVC">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="exitToAuth:" destination="-1" eventType="touchUpInside" id="KWD-LH-RZT"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="y6z-Qh-J2N" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="DAC-gy-KB9"/>
-                <constraint firstItem="y6z-Qh-J2N" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ov1-ut-u7h"/>
+                <constraint firstItem="VQf-Ik-i3y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="08R-LM-1Ts"/>
+                <constraint firstItem="VQf-Ik-i3y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="unX-yN-V2t"/>
             </constraints>
             <point key="canvasLocation" x="139" y="90"/>
         </view>

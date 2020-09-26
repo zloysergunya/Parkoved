@@ -87,40 +87,6 @@ class RoundGradientButton: UIButton { // Класс для закруглени�
     }
 }
 
-/*class GradientButton: UIButton {
- let gradientLayer = CAGradientLayer()
- 
- @IBInspectable
- var fromColor: UIColor? {
- didSet {
- setGradient(fromColor, toColor)
- }
- }
- 
- @IBInspectable
- var toColor: UIColor? {
- didSet {
- setGradient(fromColor, toColor)
- }
- }
- 
- private func setGradient(_ topGradientColor: UIColor?,_ bottomGradientColor: UIColor?) {
- if let topGradientColor = topGradientColor, let bottomGradientColor = bottomGradientColor {
- gradientLayer.frame = bounds
- gradientLayer.colors = [topGradientColor.cgColor, bottomGradientColor.cgColor]
- gradientLayer.startPoint = CGPoint(x: 0, y: 0)
- gradientLayer.endPoint = CGPoint(x: 1, y: 1)
- gradientLayer.borderColor = layer.borderColor
- gradientLayer.borderWidth = layer.borderWidth
- gradientLayer.cornerRadius = layer.cornerRadius
- gradientLayer.cornerRadius = min(bounds.width, bounds.height) / 2
- layer.insertSublayer(gradientLayer, at: 0)
- } else {
- gradientLayer.removeFromSuperlayer()
- }
- }
- }*/
-
 class RoundButton: UIButton { // Класс для закругления кнопок
     @IBInspectable var borderWidth : CGFloat = 0 {
         didSet {
@@ -129,25 +95,39 @@ class RoundButton: UIButton { // Класс для закругления кно
         }
     }
     @IBInspectable var borderColor : UIColor = UIColor.clear
-    
+    @IBInspectable var cornerRadius: CGFloat = -1 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+        }
+        
+    }
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.borderColor = borderColor.cgColor
-        self.layer.cornerRadius = min(bounds.width, bounds.height) / 2
+//        self.layer.cornerRadius = min(bounds.width, bounds.height) / 2
     }
 }
 
 class RoundField: UITextField { // Класс для закругления кнопок
-    
+    @IBInspectable var cornerRadius: CGFloat = -1 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+        }
+        
+    }
     var y : CGFloat = 0
     @IBInspectable var borderWidth : CGFloat = 0 {
         didSet {
             self.layer.masksToBounds = true
             self.layer.borderWidth = borderWidth
-            self.layer.cornerRadius = self.bounds.size.height / 2.0
+//            self.layer.cornerRadius = self.bounds.size.height / 2.0
         }
     }
-    @IBInspectable var borderColor : UIColor = UIColor.clear
+    @IBInspectable var borderColor : UIColor = UIColor.clear {
+        didSet {
+            self.layer.borderColor = borderColor.cgColor
+        }
+    }
     
     @IBInspectable var verticalPosition : CGFloat = 0 {
         didSet {
@@ -157,18 +137,11 @@ class RoundField: UITextField { // Класс для закругления кн
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.borderColor = borderColor.cgColor
+        
         self.layer.cornerRadius = min(bounds.width, bounds.height) / 2
-        // // print("layoutSubviews \(self.layer.cornerRadius)")
-        
-        
-        //self.drawPlaceholder(in: CGRect(x: bounds.origin.x + self.layer.cornerRadius, y: bounds.origin.y + 2, width: bounds.width - self.layer.cornerRadius * 2, height: bounds.height))
-        
     }
     
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        // // print("placeholderRect: \(self.layer.cornerRadius)")
-        //super.textRect(forBounds: bounds)
         return CGRect(x: bounds.origin.x + self.layer.cornerRadius, y: bounds.origin.y + y, width: bounds.width - self.layer.cornerRadius * 2, height: bounds.height)
     }
     

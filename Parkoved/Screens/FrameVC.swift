@@ -9,9 +9,7 @@ import UIKit
 
 class FrameVC: UIViewController {
     
-    
-    
-    func viewNeedUpdate() {
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }

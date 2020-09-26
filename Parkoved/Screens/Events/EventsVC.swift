@@ -11,7 +11,6 @@ class EventsVC: FrameVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+    
 }

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthVC" customModule="Parkoved" customModuleProvider="target">
+            <connections>
+                <outlet property="changeNumberButton" destination="hoz-35-H1g" id="U7E-Ce-vMj"/>
+                <outlet property="enterButton" destination="XLw-rn-eeZ" id="NJn-JH-ZbO"/>
+                <outlet property="phoneField" destination="Xeb-AD-JHm" id="vdr-Ju-U7m"/>
+                <outlet property="subTitleLabel" destination="IT8-5z-zgY" id="Wef-1T-bl9"/>
+                <outlet property="titleLabel" destination="YI2-u5-G4X" id="DSb-i6-A3o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI2-u5-G4X">
+                    <rect key="frame" x="16" y="209" width="382" height="81.5"/>
+                    <string key="text">Добро
+пожаловать!</string>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IT8-5z-zgY">
+                    <rect key="frame" x="16" y="306.5" width="382" height="21"/>
+                    <string key="text">Введите свой номер телефона
+</string>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xeb-AD-JHm" customClass="RoundField" customModule="Parkoved" customModuleProvider="target">
+                    <rect key="frame" x="16" y="355.5" width="382" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="6s0-V6-uiI"/>
+                    </constraints>
+                    <string key="text">+7 (960) 314-23-11
+</string>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="30"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-rn-eeZ" customClass="RoundButton" customModule="Parkoved" customModuleProvider="target">
+                    <rect key="frame" x="16" y="465.5" width="382" height="60"/>
+                    <color key="backgroundColor" red="0.20784313725490194" green="0.81568627450980391" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="M9t-dt-lIN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Отправить СМС">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nextStep:" destination="-1" eventType="touchUpInside" id="I8f-rl-Yk7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoz-35-H1g">
+                    <rect key="frame" x="16" y="549.5" width="382" height="33"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Изменить номер телефона">
+                        <color key="titleColor" red="0.20784313725490194" green="0.81568627450980391" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="changeNumber:" destination="-1" eventType="touchUpInside" id="fVN-K9-ukx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="IT8-5z-zgY" firstAttribute="top" secondItem="YI2-u5-G4X" secondAttribute="bottom" constant="16" id="4S1-Kw-4mu"/>
+                <constraint firstItem="Xeb-AD-JHm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="6eZ-Kx-rxo"/>
+                <constraint firstItem="YI2-u5-G4X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8G1-ng-6ZM"/>
+                <constraint firstItem="IT8-5z-zgY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="AdR-y9-xrh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hoz-35-H1g" secondAttribute="trailing" constant="16" id="GzP-go-Emo"/>
+                <constraint firstItem="XLw-rn-eeZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="IDR-LW-7ct"/>
+                <constraint firstItem="YI2-u5-G4X" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="165" id="K4n-L1-jSw"/>
+                <constraint firstItem="hoz-35-H1g" firstAttribute="top" secondItem="XLw-rn-eeZ" secondAttribute="bottom" constant="24" id="KT1-59-Gal"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YI2-u5-G4X" secondAttribute="trailing" constant="16" id="Wow-jP-i8X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XLw-rn-eeZ" secondAttribute="trailing" constant="16" id="g5R-2V-Y9I"/>
+                <constraint firstItem="hoz-35-H1g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="gVB-Lc-HRh"/>
+                <constraint firstItem="XLw-rn-eeZ" firstAttribute="top" secondItem="Xeb-AD-JHm" secondAttribute="bottom" constant="50" id="o0r-FK-g99"/>
+                <constraint firstItem="Xeb-AD-JHm" firstAttribute="top" secondItem="IT8-5z-zgY" secondAttribute="bottom" constant="28" id="qzh-eW-4Zb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IT8-5z-zgY" secondAttribute="trailing" constant="16" id="zPg-M9-BVb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xeb-AD-JHm" secondAttribute="trailing" constant="16" id="zQX-ED-ezh"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

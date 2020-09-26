@@ -15,11 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: TabBarController(nibName: "TabBarController", bundle: nil))
+//        window?.rootViewController = AuthVC(nibName: "AuthVC", bundle: nil)
+        window?.rootViewController = UINavigationController(rootViewController: AuthVC(nibName: "AuthVC", bundle: nil))
+//        window?.rootViewController = UINavigationController(rootViewController: TabBarController(nibName: "TabBarController", bundle: nil))
         window?.makeKeyAndVisible()
         
         return true
     }
-
+    
 }
 

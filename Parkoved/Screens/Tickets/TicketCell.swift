@@ -10,6 +10,7 @@ import UIKit
 class TicketCell: UITableViewCell {
 
     @IBOutlet weak var ticketView: CornerView!
+    @IBOutlet weak var forChildrenView: CornerView!
     @IBOutlet weak var validUntilLabel: UILabel!
     @IBOutlet weak var validUntilHeader: UILabel!
     @IBOutlet weak var workTimeLabel: UILabel!

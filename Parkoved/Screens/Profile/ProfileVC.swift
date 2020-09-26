@@ -9,8 +9,15 @@ import UIKit
 
 class ProfileVC: FrameVC {
 
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let phone = PHONE_NUMBER {
+            phoneLabel.text = phone.applyPatternOnNumbers(pattern: "+# (###) ###-##-##", replacmentCharacter: "#")
+        } else {
+            phoneLabel.text = "Нет номера"
+        }
         
     }
 

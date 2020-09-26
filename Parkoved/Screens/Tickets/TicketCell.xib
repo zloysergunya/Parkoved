@@ -12,6 +12,9 @@
         <array key="SF-Pro-Display-Bold.otf">
             <string>SFProDisplay-Bold</string>
         </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -27,13 +30,13 @@
                         <rect key="frame" x="16" y="8" width="382" height="184"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ГОДЕН ДО" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91T-FH-ONk">
-                                <rect key="frame" x="311" y="10" width="56" height="13.5"/>
+                                <rect key="frame" x="310" y="10" width="57" height="13"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="11"/>
                                 <color key="textColor" name="ticketTextGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/10/2020" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQE-DL-uxL">
-                                <rect key="frame" x="237" y="23.5" width="130" height="26.5"/>
+                                <rect key="frame" x="237" y="23" width="130" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="mVS-wO-Dhx"/>
                                 </constraints>
@@ -42,13 +45,13 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВРЕМЯ РАБОТЫ" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZy-nT-Ykd">
-                                <rect key="frame" x="282" y="60" width="85" height="13.5"/>
+                                <rect key="frame" x="279.5" y="59" width="87.5" height="13"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="11"/>
                                 <color key="textColor" name="ticketTextGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00-20:00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eyP-E8-uxc">
-                                <rect key="frame" x="167" y="73.5" width="200" height="21.5"/>
+                                <rect key="frame" x="167" y="72" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="0uZ-Rz-2Lb"/>
                                 </constraints>
@@ -57,25 +60,25 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карусель" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Cg-SC-RUm">
-                                <rect key="frame" x="15" y="10" width="207" height="29"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
+                                <rect key="frame" x="15" y="10" width="207" height="26"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОГРАНИЧЕНИЕ" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iST-5m-Def">
-                                <rect key="frame" x="15" y="60" width="81.5" height="13.5"/>
+                                <rect key="frame" x="15" y="57" width="81.5" height="13"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="11"/>
                                 <color key="textColor" name="ticketTextGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0+" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoU-eq-YdB">
-                                <rect key="frame" x="15" y="73.5" width="137" height="21.5"/>
+                                <rect key="frame" x="15" y="70" width="137" height="21"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZpD-8J-aGg">
-                                <rect key="frame" x="15" y="138" width="38.5" height="36"/>
+                                <rect key="frame" x="15" y="139" width="33.5" height="35"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,7 +110,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="использование" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl3-Uc-xnk">
-                                <rect key="frame" x="63.5" y="138" width="100" height="36"/>
+                                <rect key="frame" x="58.5" y="139" width="100" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="0eb-As-o0N"/>
                                 </constraints>
@@ -115,16 +118,41 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKZ-5g-EaR" customClass="CornerView" customModule="Parkoved" customModuleProvider="target">
+                                <rect key="frame" x="241" y="141.5" width="125" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ДЕТСКИЙ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVq-9z-m3R">
+                                        <rect key="frame" x="24.5" y="5.5" width="76.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="ticketTextGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5vD-5z-zST"/>
+                                    <constraint firstItem="wVq-9z-m3R" firstAttribute="centerX" secondItem="RKZ-5g-EaR" secondAttribute="centerX" id="SnQ-MZ-JHF"/>
+                                    <constraint firstItem="wVq-9z-m3R" firstAttribute="centerY" secondItem="RKZ-5g-EaR" secondAttribute="centerY" id="gro-RL-R8s"/>
+                                    <constraint firstAttribute="width" constant="125" id="paZ-tp-UZ6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="ticketColorGreen"/>
                         <constraints>
                             <constraint firstItem="adM-pc-dOI" firstAttribute="leading" secondItem="jzz-nP-dLX" secondAttribute="leading" constant="-5" id="0KH-ZD-n0X"/>
                             <constraint firstAttribute="trailing" secondItem="eyP-E8-uxc" secondAttribute="trailing" constant="15" id="0YH-eR-byf"/>
                             <constraint firstItem="1BZ-mT-kfW" firstAttribute="top" secondItem="jzz-nP-dLX" secondAttribute="top" constant="105" id="1pp-E9-Mvp"/>
+                            <constraint firstAttribute="trailing" secondItem="RKZ-5g-EaR" secondAttribute="trailing" constant="16" id="7Qa-Xs-5KM"/>
                             <constraint firstItem="adM-pc-dOI" firstAttribute="top" secondItem="jzz-nP-dLX" secondAttribute="top" constant="105" id="8GP-Dq-C7D"/>
                             <constraint firstItem="yoU-eq-YdB" firstAttribute="top" secondItem="iST-5m-Def" secondAttribute="bottom" id="Axo-VP-pcc"/>
                             <constraint firstAttribute="trailing" secondItem="91T-FH-ONk" secondAttribute="trailing" constant="15" id="CFI-4h-lvn"/>
                             <constraint firstItem="91T-FH-ONk" firstAttribute="top" secondItem="jzz-nP-dLX" secondAttribute="top" constant="10" id="Drc-uM-nCb"/>
+                            <constraint firstItem="RKZ-5g-EaR" firstAttribute="centerY" secondItem="dl3-Uc-xnk" secondAttribute="centerY" id="Kvl-ZX-PzS"/>
                             <constraint firstItem="iST-5m-Def" firstAttribute="top" secondItem="7Cg-SC-RUm" secondAttribute="bottom" constant="21" id="LkS-Cd-W9H"/>
                             <constraint firstAttribute="trailing" secondItem="cQE-DL-uxL" secondAttribute="trailing" constant="15" id="Mvy-Tj-9oi"/>
                             <constraint firstItem="GZy-nT-Ykd" firstAttribute="top" secondItem="cQE-DL-uxL" secondAttribute="bottom" constant="10" id="Q6x-BW-ewt"/>
@@ -164,6 +192,7 @@
                 <outlet property="ageLimit" destination="yoU-eq-YdB" id="iEQ-S2-Fno"/>
                 <outlet property="ageLimitHeader" destination="iST-5m-Def" id="UjH-fs-gpL"/>
                 <outlet property="count" destination="ZpD-8J-aGg" id="Tf0-aM-dO5"/>
+                <outlet property="forChildrenView" destination="RKZ-5g-EaR" id="bsv-Ol-BKW"/>
                 <outlet property="serviceName" destination="7Cg-SC-RUm" id="B9W-iZ-Z3D"/>
                 <outlet property="ticketView" destination="jzz-nP-dLX" id="ynj-py-NCO"/>
                 <outlet property="useLabel" destination="dl3-Uc-xnk" id="LRc-p3-whe"/>

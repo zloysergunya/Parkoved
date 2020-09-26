@@ -7,9 +7,18 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Parkoved" customModuleProvider="target">
             <connections>
+                <outlet property="phoneLabel" destination="3sK-uO-idN" id="XXT-BL-vVE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,10 +27,54 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сергей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si2-RX-lip">
+                    <rect key="frame" x="16" y="64" width="382" height="27"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 (***) ***-80-15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sK-uO-idN">
+                    <rect key="frame" x="16" y="99" width="414" height="17"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Получать уведомления" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cB0-I5-k2h">
+                    <rect key="frame" x="16" y="153" width="317" height="21"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02P-TV-D0b">
+                    <rect key="frame" x="349" y="148" width="51" height="31"/>
+                </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRH-a3-SVo">
+                    <rect key="frame" x="0.0" y="185" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rDX-1I-mY4"/>
+                    </constraints>
+                </view>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CEq-Gh-KfY">
+                    <rect key="frame" x="349" y="192" width="51" height="31"/>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рекомендованный контент" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WS-JX-6Qp">
+                    <rect key="frame" x="16" y="197" width="317" height="21"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Эти настройки помогают делать парки лучше" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VSh-0m-Mbb">
+                    <rect key="frame" x="16" y="239" width="382" height="16"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQf-Ik-i3y">
-                    <rect key="frame" x="175" y="433" width="64" height="30"/>
-                    <state key="normal" title="ProfileVC">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="16" y="315" width="123" height="30"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                    <state key="normal" title="Выйти из аккаунта">
+                        <color key="titleColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="exitToAuth:" destination="-1" eventType="touchUpInside" id="KWD-LH-RZT"/>
@@ -31,10 +84,32 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="VQf-Ik-i3y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="08R-LM-1Ts"/>
-                <constraint firstItem="VQf-Ik-i3y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="unX-yN-V2t"/>
+                <constraint firstItem="VSh-0m-Mbb" firstAttribute="top" secondItem="9WS-JX-6Qp" secondAttribute="bottom" constant="21" id="DVl-ec-7YK"/>
+                <constraint firstItem="3sK-uO-idN" firstAttribute="top" secondItem="Si2-RX-lip" secondAttribute="bottom" constant="8" id="DWf-CY-71K"/>
+                <constraint firstItem="Si2-RX-lip" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="K6V-TT-O69"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MRH-a3-SVo" secondAttribute="trailing" id="KNZ-SO-zEi"/>
+                <constraint firstItem="9WS-JX-6Qp" firstAttribute="centerY" secondItem="CEq-Gh-KfY" secondAttribute="centerY" id="KP9-gx-4j7"/>
+                <constraint firstItem="3sK-uO-idN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="16" id="LiB-HO-APX"/>
+                <constraint firstItem="VQf-Ik-i3y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OmY-eB-PZ3"/>
+                <constraint firstItem="MRH-a3-SVo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ryq-Fe-2Vl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Si2-RX-lip" secondAttribute="trailing" constant="16" id="T1b-Pp-1Ou"/>
+                <constraint firstItem="02P-TV-D0b" firstAttribute="top" secondItem="3sK-uO-idN" secondAttribute="bottom" constant="32" id="UCX-TV-gKm"/>
+                <constraint firstItem="02P-TV-D0b" firstAttribute="leading" secondItem="cB0-I5-k2h" secondAttribute="trailing" constant="16" id="VEf-k8-qTv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CEq-Gh-KfY" secondAttribute="trailing" constant="16" id="W4a-8V-Jvb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VSh-0m-Mbb" secondAttribute="trailing" constant="16" id="eko-Mc-KS1"/>
+                <constraint firstItem="3sK-uO-idN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="gyW-NX-BE4"/>
+                <constraint firstItem="9WS-JX-6Qp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hcq-5h-Kxc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="02P-TV-D0b" secondAttribute="trailing" constant="16" id="iof-a9-FmU"/>
+                <constraint firstItem="Si2-RX-lip" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="isX-AS-wKN"/>
+                <constraint firstItem="CEq-Gh-KfY" firstAttribute="top" secondItem="MRH-a3-SVo" secondAttribute="bottom" constant="6" id="jNH-sv-hsu"/>
+                <constraint firstItem="MRH-a3-SVo" firstAttribute="top" secondItem="02P-TV-D0b" secondAttribute="bottom" constant="6" id="jO5-a8-ddu"/>
+                <constraint firstItem="VQf-Ik-i3y" firstAttribute="top" secondItem="VSh-0m-Mbb" secondAttribute="bottom" constant="60" id="jet-LJ-yMe"/>
+                <constraint firstItem="VSh-0m-Mbb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="rW0-8E-OWd"/>
+                <constraint firstItem="CEq-Gh-KfY" firstAttribute="leading" secondItem="9WS-JX-6Qp" secondAttribute="trailing" constant="16" id="udV-MD-LLB"/>
+                <constraint firstItem="cB0-I5-k2h" firstAttribute="centerY" secondItem="02P-TV-D0b" secondAttribute="centerY" id="uy7-DP-Cjk"/>
+                <constraint firstItem="cB0-I5-k2h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="xYU-03-rlL"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="90"/>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
         </view>
     </objects>
     <resources>

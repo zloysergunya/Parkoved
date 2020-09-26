@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventsVC" customModule="Parkoved" customModuleProvider="target">
             <connections>
+                <outlet property="eventsTable" destination="9EM-Ab-RAZ" id="Zpu-nJ-wMJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EventsVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bc-Pe-akA">
-                    <rect key="frame" x="170.5" y="437.5" width="73" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9EM-Ab-RAZ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="9bc-Pe-akA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="SHb-w4-ewI"/>
-                <constraint firstItem="9bc-Pe-akA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jfc-3N-MBr"/>
+                <constraint firstItem="9EM-Ab-RAZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NM7-D0-k0s"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9EM-Ab-RAZ" secondAttribute="trailing" id="pYO-Nl-6tL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9EM-Ab-RAZ" secondAttribute="bottom" id="wc8-Bk-O77"/>
+                <constraint firstItem="9EM-Ab-RAZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zh2-pR-zGn"/>
             </constraints>
             <point key="canvasLocation" x="139" y="94"/>
         </view>

@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FrameVC: UIViewController {
+    
+    let realM = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()

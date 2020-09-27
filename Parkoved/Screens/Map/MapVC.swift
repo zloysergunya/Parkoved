@@ -73,10 +73,9 @@ class MapVC: FrameVC {
     }
     
     func centerViewOnUserLocation() {
-        if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-            parkMap.setRegion(region, animated: true)
-        }
+        let location = CLLocationCoordinate2D(latitude: 56.007985, longitude: 92.852991)
+        let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        parkMap.setRegion(region, animated: true)
     }
     
     func updatePoints() {

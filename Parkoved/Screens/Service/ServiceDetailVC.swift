@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServiceDetailVC: UIViewController {
+class ServiceDetailVC: FrameVC {
 
     @IBOutlet weak var imageCollection: UICollectionView!
     @IBOutlet weak var finalSumLabel: UILabel!
@@ -48,7 +48,9 @@ class ServiceDetailVC: UIViewController {
     }
 
     @IBAction func payWithApplePay(_ sender: Any) {
-        
+        self.dialog(title: "Спасибо за покупку!", message: "Проверьте вкладку “Билеты” внизу ;)", default: nil, cancel: "Закрыть", onAgree: nil, onCancel: { _ in
+            self.dismiss(animated: true, completion: nil)
+        })
     }
     
     @IBAction func minusTapAction(sender: UITapGestureRecognizer) {
@@ -79,11 +81,11 @@ class ServiceDetailVC: UIViewController {
     }
     
     @IBAction func plusChildrenTapAction(sender: UITapGestureRecognizer) {
-        count += 1
-        if count > 99 {
-            count = 99
+        childrenCount += 1
+        if childrenCount > 99 {
+            childrenCount = 99
         }
-        childrenCountLabel.text = "\(count)"
+        childrenCountLabel.text = "\(childrenCount)"
         countFinalSum()
     }
     

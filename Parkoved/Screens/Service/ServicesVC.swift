@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServicesVC: UIViewController {
+class ServicesVC: FrameVC {
 
     @IBOutlet weak var serviceTable: UITableView!
     

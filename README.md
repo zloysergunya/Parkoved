@@ -22,4 +22,4 @@ pod install
 ## Гид по приложению:
 Авторизация по номеру телефона.
 
-![](https://sun9-64.userapi.com/bD8U1Etx6gRLXoMVL-ORhNQl-sfRKUzyDeVX7g/dLJVLdFCBWY.jpg)
+![](https://sun9-33.userapi.com/e51jB8Rikre8Z8tOOB-yS7RuTxGm5b7agP6B3A/Nh_T33xS7Qw.jpg)

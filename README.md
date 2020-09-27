@@ -31,3 +31,11 @@ pod install
 ### Карта парка
 
 ![](https://sun9-3.userapi.com/bul0M9Kw5lt3eLCztIL0DbkwbzYXW1T1i_zWbg/04Sk3ll9x2s.jpg)
+
+### Билеты
+
+![](https://sun9-5.userapi.com/xgHe62ydL-pi7QS6vK8-G5CzMbk53SWI5y6vEw/e3OW6nHlN7E.jpg)
+
+### Профиль пользователя
+
+![](https://sun9-19.userapi.com/IHEUh_5gTL7SlWyhvKTAeVw4wnUZWFraBwjICw/eFuGZCLUhP0.jpg)

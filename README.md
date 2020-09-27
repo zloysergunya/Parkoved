@@ -20,10 +20,14 @@ pod install
 ```
 
 ## Гид по приложению:
-Авторизация по номеру телефона
+### Авторизация по номеру телефона
 
 ![](https://sun9-33.userapi.com/e51jB8Rikre8Z8tOOB-yS7RuTxGm5b7agP6B3A/Nh_T33xS7Qw.jpg)
 
-Экран событий
+### Экран событий
 
 ![](https://sun1-21.userapi.com/zLjpZKy2DJbuHlku08ppDGFAwYHkWHI9SrZE5g/uhmLEGhUr0k.jpg)
+
+### Карта парка
+
+![](https://sun9-3.userapi.com/bul0M9Kw5lt3eLCztIL0DbkwbzYXW1T1i_zWbg/04Sk3ll9x2s.jpg)

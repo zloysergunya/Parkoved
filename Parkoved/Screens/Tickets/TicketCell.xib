@@ -60,7 +60,7 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карусель" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Cg-SC-RUm">
-                                <rect key="frame" x="15" y="10" width="207" height="26"/>
+                                <rect key="frame" x="15" y="10" width="214" height="26"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,7 +161,7 @@
                             <constraint firstAttribute="bottom" secondItem="ZpD-8J-aGg" secondAttribute="bottom" constant="10" id="UTm-Nx-eCx"/>
                             <constraint firstAttribute="height" constant="184" id="WQG-5N-EP8"/>
                             <constraint firstItem="eyP-E8-uxc" firstAttribute="leading" secondItem="yoU-eq-YdB" secondAttribute="trailing" constant="15" id="XTW-Hv-2FL"/>
-                            <constraint firstItem="cQE-DL-uxL" firstAttribute="leading" secondItem="7Cg-SC-RUm" secondAttribute="trailing" constant="15" id="ahD-I4-cpm"/>
+                            <constraint firstItem="cQE-DL-uxL" firstAttribute="leading" secondItem="7Cg-SC-RUm" secondAttribute="trailing" constant="8" id="ahD-I4-cpm"/>
                             <constraint firstAttribute="trailing" secondItem="GZy-nT-Ykd" secondAttribute="trailing" constant="15" id="cHp-tJ-qEF"/>
                             <constraint firstItem="ZpD-8J-aGg" firstAttribute="bottom" secondItem="dl3-Uc-xnk" secondAttribute="bottom" id="etg-QX-tky"/>
                             <constraint firstItem="7Cg-SC-RUm" firstAttribute="top" secondItem="jzz-nP-dLX" secondAttribute="top" constant="10" id="fsN-cy-w6I"/>

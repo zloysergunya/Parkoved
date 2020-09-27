@@ -4,7 +4,7 @@
 target 'Parkoved' do
   use_frameworks!
   
-  pod 'Alamofire'
+  pod 'OverlayContainer'
   pod 'RealmSwift'
 
 end

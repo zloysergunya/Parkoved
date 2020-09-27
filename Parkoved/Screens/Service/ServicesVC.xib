@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServicesVC" customModule="Parkoved" customModuleProvider="target">
+            <connections>
+                <outlet property="serviceTable" destination="I3E-UG-3Dk" id="EuK-DE-GX6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CornerView" customModule="Parkoved" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZl-2l-QKh" customClass="CornerView" customModule="Parkoved" customModuleProvider="target">
+                    <rect key="frame" x="190.5" y="50" width="33" height="4"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="33" id="P1D-kg-hhy"/>
+                        <constraint firstAttribute="height" constant="4" id="WFc-Pj-qoC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список мест" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-tA-SZC">
+                    <rect key="frame" x="16" y="64" width="382" height="27"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="🔎 Искать" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9j-zh-lY3" customClass="RoundField" customModule="Parkoved" customModuleProvider="target">
+                    <rect key="frame" x="16" y="107" width="382" height="36"/>
+                    <color key="backgroundColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="mf6-Hp-oY0"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ftb-LF-1BI">
+                    <rect key="frame" x="16" y="159" width="382" height="32"/>
+                    <segments>
+                        <segment title="Аттракционы"/>
+                        <segment title="Пространства"/>
+                        <segment title="Кафе"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I3E-UG-3Dk">
+                    <rect key="frame" x="0.0" y="206" width="414" height="656"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="I3E-UG-3Dk" secondAttribute="bottom" id="4HD-0E-ujm"/>
+                <constraint firstItem="Ftb-LF-1BI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5ob-Ps-ygD"/>
+                <constraint firstItem="I3E-UG-3Dk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7GT-bB-gpV"/>
+                <constraint firstItem="I3E-UG-3Dk" firstAttribute="top" secondItem="Ftb-LF-1BI" secondAttribute="bottom" constant="16" id="7Vl-iN-aff"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IDT-tA-SZC" secondAttribute="trailing" constant="16" id="7nz-Pi-ptx"/>
+                <constraint firstItem="OZl-2l-QKh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Afk-C9-Q6o"/>
+                <constraint firstItem="OZl-2l-QKh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="6" id="Euo-n8-RAL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A9j-zh-lY3" secondAttribute="trailing" constant="16" id="J5d-eW-tgu"/>
+                <constraint firstItem="IDT-tA-SZC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="NqL-n0-LKN"/>
+                <constraint firstItem="A9j-zh-lY3" firstAttribute="top" secondItem="IDT-tA-SZC" secondAttribute="bottom" constant="16" id="Tvi-YB-383"/>
+                <constraint firstItem="Ftb-LF-1BI" firstAttribute="top" secondItem="A9j-zh-lY3" secondAttribute="bottom" constant="16" id="W1a-8R-Nff"/>
+                <constraint firstItem="A9j-zh-lY3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="WC9-Nm-qMl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ftb-LF-1BI" secondAttribute="trailing" constant="16" id="aCy-aj-aJ0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="I3E-UG-3Dk" secondAttribute="trailing" id="mtQ-M7-vkg"/>
+                <constraint firstItem="IDT-tA-SZC" firstAttribute="top" secondItem="OZl-2l-QKh" secondAttribute="bottom" constant="10" id="pbf-Gk-9mb"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="138" y="78"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

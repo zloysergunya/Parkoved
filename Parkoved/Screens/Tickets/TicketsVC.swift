@@ -25,6 +25,8 @@ class TicketsVC: FrameVC {
         super.viewWillAppear(animated)
         updateTickets()
         updateServices()
+        services = self.realM.objects(Service.self)
+        tickets = self.realM.objects(Ticket.self)
         self.ticketsTable.reloadData()
     }
 
@@ -130,6 +132,11 @@ extension TicketsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = TicketDetailsVC(nibName: "TicketDetailsVC", bundle: nil)
+        vc.ticket = tickets[indexPath.row]
+        vc.service = Service()
+        if let service = realM.objects(Service.self).filter("sid == %@", tickets[indexPath.row].service).first {
+            vc.service = service
+        }
         self.present(vc, animated: true, completion: nil)
     }
 }

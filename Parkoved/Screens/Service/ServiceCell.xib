@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ServiceCell" customModule="Parkoved" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jb4-A8-Zxz">
+                        <rect key="frame" x="15" y="15" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="V6v-Ja-rLj"/>
+                            <constraint firstAttribute="width" constant="100" id="XQh-Q4-f6r"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="“Цед-Зип”" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xv9-mr-6nD">
+                        <rect key="frame" x="130" y="15" width="201" height="20.5"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="450 ₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-cG-FSV">
+                        <rect key="frame" x="339" y="15" width="60" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="3Lx-w3-caa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                        <color key="textColor" name="ticketColorGreen"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="200 м · 12+" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pSD-ey-2jI">
+                        <rect key="frame" x="130" y="39.5" width="145" height="20.5"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                        <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Детский: 250 ₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRG-V7-I9g">
+                        <rect key="frame" x="279" y="39.5" width="120" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="ig4-Lc-Tf5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                        <color key="textColor" name="ticketColorGreen"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Самый первый аттракцион в России. Основан Петром I в 1712 году." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFD-gM-JGU">
+                        <rect key="frame" x="130" y="84.5" width="269" height="30.5"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                        <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OOu-cG-FSV" firstAttribute="leading" secondItem="xv9-mr-6nD" secondAttribute="trailing" constant="8" id="3Sj-mg-s4A"/>
+                    <constraint firstItem="nFD-gM-JGU" firstAttribute="leading" secondItem="jb4-A8-Zxz" secondAttribute="trailing" constant="15" id="3dq-U3-VhD"/>
+                    <constraint firstAttribute="trailing" secondItem="OOu-cG-FSV" secondAttribute="trailing" constant="15" id="3y3-0m-sCR"/>
+                    <constraint firstItem="pSD-ey-2jI" firstAttribute="leading" secondItem="jb4-A8-Zxz" secondAttribute="trailing" constant="15" id="4kG-JA-8dp"/>
+                    <constraint firstItem="xv9-mr-6nD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="9x6-vh-u3q"/>
+                    <constraint firstItem="xv9-mr-6nD" firstAttribute="leading" secondItem="jb4-A8-Zxz" secondAttribute="trailing" constant="15" id="FZZ-it-9pp"/>
+                    <constraint firstAttribute="trailing" secondItem="nFD-gM-JGU" secondAttribute="trailing" constant="15" id="UPa-A9-X82"/>
+                    <constraint firstItem="fRG-V7-I9g" firstAttribute="top" secondItem="xv9-mr-6nD" secondAttribute="bottom" constant="4" id="UXa-Ml-Sgy"/>
+                    <constraint firstItem="fRG-V7-I9g" firstAttribute="leading" secondItem="pSD-ey-2jI" secondAttribute="trailing" constant="4" id="aWY-EB-Ff3"/>
+                    <constraint firstItem="jb4-A8-Zxz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="iu0-Mg-45C"/>
+                    <constraint firstItem="OOu-cG-FSV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="kB7-P9-PMB"/>
+                    <constraint firstItem="pSD-ey-2jI" firstAttribute="top" secondItem="xv9-mr-6nD" secondAttribute="bottom" constant="4" id="lea-DT-47Y"/>
+                    <constraint firstAttribute="trailing" secondItem="fRG-V7-I9g" secondAttribute="trailing" constant="15" id="nSg-i8-z1n"/>
+                    <constraint firstItem="nFD-gM-JGU" firstAttribute="top" secondItem="fRG-V7-I9g" secondAttribute="bottom" constant="27" id="pLp-tN-Xtc"/>
+                    <constraint firstAttribute="bottom" secondItem="nFD-gM-JGU" secondAttribute="bottom" constant="15" id="xDZ-8o-1FW"/>
+                    <constraint firstItem="jb4-A8-Zxz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="yxc-hi-fMB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ageLimit" destination="pSD-ey-2jI" id="4Ko-2u-Z5c"/>
+                <outlet property="serviceChildrenPrice" destination="fRG-V7-I9g" id="Pu2-y7-GeA"/>
+                <outlet property="serviceDiscription" destination="nFD-gM-JGU" id="l6X-F2-rvV"/>
+                <outlet property="serviceImage" destination="jb4-A8-Zxz" id="5CO-In-teT"/>
+                <outlet property="serviceName" destination="xv9-mr-6nD" id="HfO-6E-5TA"/>
+                <outlet property="servicePrice" destination="OOu-cG-FSV" id="goE-Wm-lvD"/>
+            </connections>
+            <point key="canvasLocation" x="-13.043478260869566" y="69.642857142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="ticketColorGreen">
+            <color red="0.45098039215686275" green="0.84313725490196079" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

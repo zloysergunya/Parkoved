@@ -15,6 +15,7 @@ class TabBarController: UITabBarController, OverlayContainerViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomBarController = self
+        hideKeyboardWhenTappedAround()
         title = "ЦЕНТРАЛЬНЫЙ ПАРК"
         createTabBarController()
     }

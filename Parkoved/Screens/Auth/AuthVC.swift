@@ -19,6 +19,7 @@ class AuthVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         phoneField.delegate = self
     }
     

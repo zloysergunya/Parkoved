@@ -8,10 +8,5 @@
 import UIKit
 
 class ServiceDetailCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+    @IBOutlet weak var serviceDetailImageView: UIImageView!
 }

@@ -51,8 +51,6 @@
 		C45EEACD251EE31100F29C97 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C45EEACC251EE31100F29C97 /* SF-Pro-Text-Semibold.otf */; };
 		C45EEAD0251EE38200F29C97 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EEACF251EE38200F29C97 /* Globals.swift */; };
 		C45EEAD4251EE5CC00F29C97 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EEAD3251EE5CC00F29C97 /* UIView.swift */; };
-		C45EEAE3251EEE2B00F29C97 /* FrameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EEAE1251EEE2B00F29C97 /* FrameVC.swift */; };
-		C45EEAE4251EEE2B00F29C97 /* FrameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45EEAE2251EEE2B00F29C97 /* FrameVC.xib */; };
 		C45EEAE8251EF2C600F29C97 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EEAE7251EF2C600F29C97 /* UIViewController.swift */; };
 		C45EEB07251F101D00F29C97 /* HTTPrequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EEB06251F101D00F29C97 /* HTTPrequest.swift */; };
 		C45EEB0A251F106300F29C97 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EEB09251F106300F29C97 /* Dictionary.swift */; };
@@ -67,7 +65,10 @@
 		C466B20B251FC24B009CC15F /* ServicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C466B209251FC24B009CC15F /* ServicesVC.xib */; };
 		C466B216251FCD1A009CC15F /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C466B214251FCD1A009CC15F /* ServiceCell.swift */; };
 		C466B217251FCD1A009CC15F /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C466B215251FCD1A009CC15F /* ServiceCell.xib */; };
+		C47516F42593767800E50D39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47516F32593767800E50D39 /* User.swift */; };
 		C4C77ED32520452300995414 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C77ED22520452300995414 /* UIImageView.swift */; };
+		C4E6D5E2259058D900F36514 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4E6D5E1259058D900F36514 /* GoogleService-Info.plist */; };
+		C4E6D5E52590591E00F36514 /* TicketsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6D5E42590591E00F36514 /* TicketsDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,8 +118,6 @@
 		C45EEACC251EE31100F29C97 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		C45EEACF251EE38200F29C97 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		C45EEAD3251EE5CC00F29C97 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		C45EEAE1251EEE2B00F29C97 /* FrameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameVC.swift; sourceTree = "<group>"; };
-		C45EEAE2251EEE2B00F29C97 /* FrameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrameVC.xib; sourceTree = "<group>"; };
 		C45EEAE7251EF2C600F29C97 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C45EEB06251F101D00F29C97 /* HTTPrequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPrequest.swift; sourceTree = "<group>"; };
 		C45EEB09251F106300F29C97 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -133,7 +132,10 @@
 		C466B209251FC24B009CC15F /* ServicesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesVC.xib; sourceTree = "<group>"; };
 		C466B214251FCD1A009CC15F /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		C466B215251FCD1A009CC15F /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		C47516F32593767800E50D39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C4C77ED22520452300995414 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		C4E6D5E1259058D900F36514 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4E6D5E42590591E00F36514 /* TicketsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsDataProvider.swift; sourceTree = "<group>"; };
 		CBCDA9BA0FD83985808906C3 /* Pods-Parkoved.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parkoved.debug.xcconfig"; path = "Target Support Files/Pods-Parkoved/Pods-Parkoved.debug.xcconfig"; sourceTree = "<group>"; };
 		D0A28FF733A6FD3BAF0DD34C /* Pods-Parkoved.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parkoved.release.xcconfig"; path = "Target Support Files/Pods-Parkoved/Pods-Parkoved.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 		C4409E42251E1FDC00E2D6C0 /* Parkoved */ = {
 			isa = PBXGroup;
 			children = (
+				C4E6D5E1259058D900F36514 /* GoogleService-Info.plist */,
 				C4409E51251E1FDD00E2D6C0 /* Info.plist */,
 				C4409E43251E1FDC00E2D6C0 /* AppDelegate.swift */,
 				C45EEACF251EE38200F29C97 /* Globals.swift */,
@@ -211,8 +214,6 @@
 		C4409E59251E206000E2D6C0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C45EEAE1251EEE2B00F29C97 /* FrameVC.swift */,
-				C45EEAE2251EEE2B00F29C97 /* FrameVC.xib */,
 				C45EEABC251EDD6600F29C97 /* Auth */,
 				C4409E60251E20D100E2D6C0 /* Events */,
 				C4409E4E251E1FDD00E2D6C0 /* LaunchScreen.storyboard */,
@@ -256,6 +257,7 @@
 				C4409E74251E296F00E2D6C0 /* TicketsVC.xib */,
 				C4409E7E251E3A2500E2D6C0 /* TicketCell.swift */,
 				C4409E7F251E3A2500E2D6C0 /* TicketCell.xib */,
+				C4E6D5E42590591E00F36514 /* TicketsDataProvider.swift */,
 			);
 			path = Tickets;
 			sourceTree = "<group>";
@@ -345,6 +347,7 @@
 			children = (
 				C4433015251F754800CB1061 /* Ticket.swift */,
 				C4433019251F869E00CB1061 /* Service.swift */,
+				C47516F32593767800E50D39 /* User.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -352,14 +355,14 @@
 		C466B207251FC21F009CC15F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				C466B208251FC24B009CC15F /* ServicesVC.swift */,
-				C466B209251FC24B009CC15F /* ServicesVC.xib */,
 				C466B214251FCD1A009CC15F /* ServiceCell.swift */,
 				C466B215251FCD1A009CC15F /* ServiceCell.xib */,
-				C44397F425203A78002950CC /* ServiceDetailVC.swift */,
-				C44397F525203A78002950CC /* ServiceDetailVC.xib */,
 				C44397F925204398002950CC /* ServiceDetailCell.swift */,
 				C44397FA25204398002950CC /* ServiceDetailCell.xib */,
+				C44397F425203A78002950CC /* ServiceDetailVC.swift */,
+				C44397F525203A78002950CC /* ServiceDetailVC.xib */,
+				C466B208251FC24B009CC15F /* ServicesVC.swift */,
+				C466B209251FC24B009CC15F /* ServicesVC.xib */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				C4409E3D251E1FDC00E2D6C0 /* Frameworks */,
 				C4409E3E251E1FDC00E2D6C0 /* Resources */,
 				72B4C16E808E05FF6681A6E7 /* [CP] Embed Pods Frameworks */,
+				6980AEA5E1C1139542740451 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -442,10 +446,10 @@
 				C4409E9C251E556100E2D6C0 /* SF-Pro-Display-Heavy.otf in Resources */,
 				C4409EA5251E556100E2D6C0 /* SF-Pro-Display-Medium.otf in Resources */,
 				C45EEAC5251EDE8D00F29C97 /* SF-Pro-Text-Regular.otf in Resources */,
-				C45EEAE4251EEE2B00F29C97 /* FrameVC.xib in Resources */,
 				C45EEB36251F4A6700F29C97 /* EventHeaderCell.xib in Resources */,
 				C4409E76251E296F00E2D6C0 /* TicketsVC.xib in Resources */,
 				C44397F725203A78002950CC /* ServiceDetailVC.xib in Resources */,
+				C4E6D5E2259058D900F36514 /* GoogleService-Info.plist in Resources */,
 				C45EEB3B251F4CE500F29C97 /* EventNewsCell.xib in Resources */,
 				C4409E50251E1FDD00E2D6C0 /* LaunchScreen.storyboard in Resources */,
 				C45EEAC0251EDD8200F29C97 /* AuthVC.xib in Resources */,
@@ -466,6 +470,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6980AEA5E1C1139542740451 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parkoved/Pods-Parkoved-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parkoved/Pods-Parkoved-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Parkoved/Pods-Parkoved-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		70D9007AF48CEFAC6ED9B79E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +536,7 @@
 				C4409E6D251E295600E2D6C0 /* MapVC.swift in Sources */,
 				C4433016251F754800CB1061 /* Ticket.swift in Sources */,
 				C44397FB25204398002950CC /* ServiceDetailCell.swift in Sources */,
+				C4E6D5E52590591E00F36514 /* TicketsDataProvider.swift in Sources */,
 				C45EEACA251EE22800F29C97 /* String.swift in Sources */,
 				C4409E44251E1FDC00E2D6C0 /* AppDelegate.swift in Sources */,
 				C4409E7B251E298800E2D6C0 /* ProfileVC.swift in Sources */,
@@ -529,12 +551,12 @@
 				C4409E85251E3B3000E2D6C0 /* IBDesignable.swift in Sources */,
 				C44397F625203A78002950CC /* ServiceDetailVC.swift in Sources */,
 				C45EEABF251EDD8200F29C97 /* AuthVC.swift in Sources */,
-				C45EEAE3251EEE2B00F29C97 /* FrameVC.swift in Sources */,
 				C4409E75251E296F00E2D6C0 /* TicketsVC.swift in Sources */,
 				C4433011251F5AD800CB1061 /* ArticleCell.swift in Sources */,
 				C45EEAD4251EE5CC00F29C97 /* UIView.swift in Sources */,
 				C4409E80251E3A2500E2D6C0 /* TicketCell.swift in Sources */,
 				C45EEB12251F128000F29C97 /* UIDevice.swift in Sources */,
+				C47516F42593767800E50D39 /* User.swift in Sources */,
 				C4409EBA251E62C600E2D6C0 /* TicketDetailsVC.swift in Sources */,
 				C466B216251FCD1A009CC15F /* ServiceCell.swift in Sources */,
 				C45EEAD0251EE38200F29C97 /* Globals.swift in Sources */,
@@ -612,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -667,7 +689,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

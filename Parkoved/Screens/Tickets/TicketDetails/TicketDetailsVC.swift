@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TicketDetailsVC: FrameVC {
+class TicketDetailsVC: UIViewController {
     
     @IBOutlet weak var ticketView: CornerView!
     @IBOutlet weak var forChildrenView: CornerView!
@@ -26,10 +26,10 @@ class TicketDetailsVC: FrameVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configScreen()
+        setupUI()
     }
     
-    func configScreen() {
+    func setupUI() {
         serviceName.text = service.name
         workTimeLabel.text = service.workingHours
         ageLimit.text = "\(service.ageLimit)+"

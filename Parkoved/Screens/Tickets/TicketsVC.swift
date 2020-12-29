@@ -8,33 +8,50 @@
 import UIKit
 import RealmSwift
 
-class TicketsVC: FrameVC {
+class TicketsVC: UIViewController {
 
     @IBOutlet weak var ticketsTable: UITableView!
     
+    var dataProvider = TicketsDataProvider()
     var tickets: Results<Ticket>!
     var services: Results<Service>!
     var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTicketsTable()
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateTickets()
-        updateServices()
-        services = self.realM.objects(Service.self)
-        tickets = self.realM.objects(Ticket.self)
-        self.ticketsTable.reloadData()
+        updateUI()
     }
 
     @IBAction func addNewTicket(_ sender: Any) {
         bottomBarController.selectedIndex = 1
     }
     
-    func findEndOfWord(_ num: Int) -> String {
+    private func setupUI() {
+        setupTableView(ticketsTable)
+    }
+    
+    private func updateUI() {
+        dataProvider.updateServices() {
+            self.services = self.dataProvider.getServices()
+        }
+        
+        dataProvider.updateTickets() {
+            self.tickets = self.dataProvider.getTickets()
+            self.ticketsTable.reloadData()
+        }
+    }
+    
+    @objc private func updateInfo() {
+        updateUI()
+        refreshControl.endRefreshing()
+    }
+    
+    private func findEndOfWord(_ num: Int) -> String {
         switch num % 10 {
         case 1:
             return "использованиe"
@@ -46,66 +63,16 @@ class TicketsVC: FrameVC {
     }
 }
 
-extension TicketsVC {
-    @objc func updateInfo() {
-        updateTickets()
-        updateServices()
-        refreshControl.endRefreshing()
-    }
-    
-    func updateServices() {
-        let params = ["token": AUTH_TOKEN,
-                      "park": "stringstringstri"]
-        HTTPRequest(SERVER_URL + "services/", method: "GET", params: params, completion: { data, status in
-            if status < 399 {
-                if let json = data?.json as? [[String:Any]] {
-                    self.saveServices(json)
-                }
-            }
-        })
-    }
-    
-    func saveServices(_ dict: [[String:Any]]) {
-        try! realM.write {
-            dict.forEach { service in
-                realM.add(Service(service), update: .modified)
-            }
-            self.services = self.realM.objects(Service.self)
-            self.ticketsTable.reloadData()
-        }
-    }
-    
-    func updateTickets() {
-        let params = ["token": AUTH_TOKEN]
-        HTTPRequest(SERVER_URL + "tickets/", method: "GET", params: params, completion: { data, status in
-            if status < 399 {
-                if let json = data?.json as? [[String:Any]] {
-                    self.saveTickets(json)
-                }
-            }
-        })
-    }
-    
-    func saveTickets(_ dict: [[String:Any]]) {
-        try! realM.write {
-            dict.forEach { ticket in
-                realM.add(Ticket(ticket), update: .modified)
-            }
-            self.tickets = self.realM.objects(Ticket.self)
-            self.ticketsTable.reloadData()
-        }
-    }
-}
-
+// MARK: - work with tableView
 extension TicketsVC: UITableViewDelegate, UITableViewDataSource {
-    func setupTicketsTable() {
+    private func setupTableView(_ tableView: UITableView) {
         refreshControl.addTarget(self, action: #selector(updateInfo), for: .valueChanged)
         refreshControl.tintColor = .black
         refreshControl.alpha = 0.5
-        ticketsTable.addSubview(refreshControl)
-        ticketsTable.delegate = self
-        ticketsTable.dataSource = self
-        ticketsTable.register(UINib(nibName: "TicketCell", bundle: nil), forCellReuseIdentifier: "TicketCell")
+        tableView.addSubview(refreshControl)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TicketCell", bundle: nil), forCellReuseIdentifier: "TicketCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,7 +81,7 @@ extension TicketsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TicketCell", for: indexPath) as! TicketCell
-        if let service = realM.objects(Service.self).filter("sid == %@", tickets[indexPath.row].service).first {
+        if let service = dataProvider.getServiceById(tickets[indexPath.row].service) {
             cell.serviceName.text = service.name
             cell.workTimeLabel.text = service.workingHours
             cell.ageLimit.text = "\(service.ageLimit)+"
@@ -134,7 +101,7 @@ extension TicketsVC: UITableViewDelegate, UITableViewDataSource {
         let vc = TicketDetailsVC(nibName: "TicketDetailsVC", bundle: nil)
         vc.ticket = tickets[indexPath.row]
         vc.service = Service()
-        if let service = realM.objects(Service.self).filter("sid == %@", tickets[indexPath.row].service).first {
+        if let service = dataProvider.getServiceById(tickets[indexPath.row].service) {
             vc.service = service
         }
         self.present(vc, animated: true, completion: nil)

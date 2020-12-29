@@ -10,7 +10,7 @@ import MapKit
 import CoreLocation
 import RealmSwift
 
-class MapVC: FrameVC {
+class MapVC: UIViewController {
 
     @IBOutlet weak var parkMap: MKMapView!
     
@@ -20,35 +20,32 @@ class MapVC: FrameVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        checkLocationServices()
-        setupMapView()
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        updateUI()
+    }
+    
+    private func setupUI() {
+        checkLocationServices()
+        setupMapView(parkMap)
+    }
+    
+    private func updateUI() {
         centerViewOnUserLocation()
         updatePoints()
     }
     
-    func setupMapView() {
-        parkMap.delegate = self
-        parkMap.setUserTrackingMode(.follow, animated: true)
-    }
-    
-    func setupLocationManager() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-    }
-    
-    func checkLocationServices() {
+    private func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
+            setupLocationManager(locationManager)
             checkLocationAuthorization()
         }
     }
     
-    func checkLocationAuthorization() {
+    private func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             parkMap.showsUserLocation = true
@@ -72,13 +69,13 @@ class MapVC: FrameVC {
         }
     }
     
-    func centerViewOnUserLocation() {
+    private func centerViewOnUserLocation() {
         let location = CLLocationCoordinate2D(latitude: 56.007985, longitude: 92.852991)
         let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         parkMap.setRegion(region, animated: true)
     }
     
-    func updatePoints() {
+    private func updatePoints() {
         var location = CLLocationCoordinate2D(latitude: 56.007844, longitude: 92.853983)
         setAnnotation(location: location, title: "Колесо обозрения")
         location = CLLocationCoordinate2D(latitude: 56.008696, longitude: 92.855399)
@@ -89,14 +86,14 @@ class MapVC: FrameVC {
         setAnnotation(location: location, title: "Каток")
     }
     
-    func setAnnotation(location: CLLocationCoordinate2D, title: String) {
+    private func setAnnotation(location: CLLocationCoordinate2D, title: String) {
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
         annotation.title = title
         parkMap.addAnnotation(annotation)
     }
     
-    func getResizedImage(width: CGFloat, height: CGFloat, image: UIImage) -> UIImage {
+    private func getResizedImage(width: CGFloat, height: CGFloat, image: UIImage) -> UIImage {
         let image = image
         let resizedSize = CGSize(width: width, height: height)
         UIGraphicsBeginImageContext(resizedSize)
@@ -107,14 +104,25 @@ class MapVC: FrameVC {
     }
 }
 
-// MARK: -- Установка местоположения пользователя
+// MARK: -- work with locationManager
 extension MapVC: CLLocationManagerDelegate {
+    private func setupLocationManager(_ manager: CLLocationManager) {
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
 }
 
+// MARKL - work with mapView
 extension MapVC: MKMapViewDelegate {
+    private func setupMapView(_ mapView: MKMapView) {
+        mapView.delegate = self
+        mapView.setUserTrackingMode(.follow, animated: true)
+    }
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
         if annotation is MKUserLocation {
@@ -137,7 +145,6 @@ extension MapVC: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("Click annotation")
         if let annotation = view.annotation as? MKPointAnnotation {
             let region = MKCoordinateRegion.init(center: annotation.coordinate, latitudinalMeters: regionInMeters / 2, longitudinalMeters: regionInMeters/2)
             mapView.setRegion(region, animated: true)

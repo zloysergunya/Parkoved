@@ -6,25 +6,31 @@
 //
 
 import UIKit
+import RealmSwift
 
-class ProfileVC: FrameVC {
+class ProfileVC: UIViewController {
 
-    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userEmail: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if let phone = PHONE_NUMBER {
-            phoneLabel.text = phone.applyPatternOnNumbers(pattern: "+# (###) ###-##-##", replacmentCharacter: "#")
-        } else {
-            phoneLabel.text = "Нет номера"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupUI()
+    }
+    
+    private func setupUI() {
+        let realM = try! Realm()
+        if let user = realM.objects(User.self).first {
+            userName.text = user.name
+            userEmail.text = user.email
         }
-        
     }
 
     @IBAction func exitToAuth(_ sender: Any) {
-        PHONE_NUMBER = nil
-        AUTH_TOKEN = nil
-        UID = nil
+        let realM = try! Realm()
+        try! realM.write {
+            realM.deleteAll()
+        }
         self.navigationController?.popToRootViewController(animated: true)
     }
 }

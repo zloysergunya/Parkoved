@@ -7,24 +7,28 @@
 
 import UIKit
 
-class EventsVC: FrameVC {
+class EventsVC: UIViewController {
 
     @IBOutlet weak var eventsTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupEventsTable()
+        setupUI()
     }
     
+    private func setupUI() {
+        setupTableView(eventsTable)
+    }
 }
 
+// MARK: - work with tableView
 extension EventsVC: UITableViewDelegate, UITableViewDataSource {
-    func setupEventsTable() {
-        eventsTable.delegate = self
-        eventsTable.dataSource = self
-        eventsTable.register(UINib(nibName: "EventHeaderCell", bundle: nil), forCellReuseIdentifier: "EventHeaderCell")
-        eventsTable.register(UINib(nibName: "EventNewsCell", bundle: nil), forCellReuseIdentifier: "EventNewsCell")
-        eventsTable.register(UINib(nibName: "ArticlesCollectionCell", bundle: nil), forCellReuseIdentifier: "ArticlesCollectionCell")
+    func setupTableView(_ tableView: UITableView) {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "EventHeaderCell", bundle: nil), forCellReuseIdentifier: "EventHeaderCell")
+        tableView.register(UINib(nibName: "EventNewsCell", bundle: nil), forCellReuseIdentifier: "EventNewsCell")
+        tableView.register(UINib(nibName: "ArticlesCollectionCell", bundle: nil), forCellReuseIdentifier: "ArticlesCollectionCell")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

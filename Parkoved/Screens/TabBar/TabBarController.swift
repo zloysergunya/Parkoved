@@ -10,14 +10,11 @@ import OverlayContainer
 
 var bottomBarController: TabBarController!
 
-class TabBarController: UITabBarController, OverlayContainerViewControllerDelegate {
+class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bottomBarController = self
-        hideKeyboardWhenTappedAround()
-        title = "ЦЕНТРАЛЬНЫЙ ПАРК"
-        createTabBarController()
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +22,14 @@ class TabBarController: UITabBarController, OverlayContainerViewControllerDelega
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
-    func createTabBarController() {        
+    private func setupUI() {
+        bottomBarController = self
+        hideKeyboardWhenTappedAround()
+        title = "ЦЕНТРАЛЬНЫЙ ПАРК"
+        createTabBarController()
+    }
+    
+    private func createTabBarController() {        
         let eventsVC = EventsVC(nibName: "EventsVC", bundle: nil)
         eventsVC.tabBarItem = UITabBarItem.init(title: "События", image: UIImage.init(systemName: "calendar"), tag: 0)
         let mapVC = MapVC(nibName: "MapVC", bundle: nil)
@@ -42,7 +46,9 @@ class TabBarController: UITabBarController, OverlayContainerViewControllerDelega
         
         viewControllers = [eventsVC, mapContainer, ticketsVC, profileVC]
     }
-    
+}
+
+extension TabBarController: OverlayContainerViewControllerDelegate {
     enum OverlayNotch: Int, CaseIterable {
         case minimum, maximum
     }

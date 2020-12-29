@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import PassKit
 
-class ServiceDetailVC: FrameVC {
+class ServiceDetailVC: UIViewController {
 
     @IBOutlet weak var imageCollection: UICollectionView!
     @IBOutlet weak var finalSumLabel: UILabel!
@@ -17,18 +18,33 @@ class ServiceDetailVC: FrameVC {
     @IBOutlet weak var plusButton: UIImageView!
     @IBOutlet weak var minusChildrenButton: UIImageView!
     @IBOutlet weak var plusChildrenButton: UIImageView!
+    @IBOutlet weak var serviceName: UILabel!
+    @IBOutlet weak var serviceDescription: UILabel!
+    @IBOutlet weak var priceLable: UILabel!
+    @IBOutlet weak var childrenPriceLabel: UILabel!
     
+    @IBOutlet weak var serviceShortInfo: UILabel!
+    var service: Service!
     var count = 1
     var childrenCount = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addTaps()
-        countFinalSum()
-        setupImageCollection()
+        setupUI()
     }
     
-    func addTaps() {
+    private func setupUI() {
+        addTaps()
+        countFinalSum()
+        setupCollectionView(imageCollection)
+        serviceName.text = service.name
+        serviceShortInfo.text = "\(Int.random(in: 100...900)) м. · \(service.ageLimit)+ · \(service.workingHours)"
+        serviceDescription.text = service.serviceDescription
+        priceLable.text = "\(service.price) ₽"
+        childrenPriceLabel.text = "\(service.price - 100) ₽"
+    }
+    
+    private func addTaps() {
         let minusTap = UITapGestureRecognizer(target: self, action: #selector(minusTapAction))
         minusButton.isUserInteractionEnabled = true
         minusButton.setTintColor(.gray)
@@ -48,9 +64,22 @@ class ServiceDetailVC: FrameVC {
     }
 
     @IBAction func payWithApplePay(_ sender: Any) {
-        self.dialog(title: "Спасибо за покупку!", message: "Проверьте вкладку “Билеты” внизу ;)", default: nil, cancel: "Закрыть", onAgree: nil, onCancel: { _ in
-            self.dismiss(animated: true, completion: nil)
-        })
+        if let paymentController = PKPaymentAuthorizationViewController(paymentRequest: createPaymentRequest()) {
+            paymentController.delegate = self
+            present(paymentController, animated: true)
+        }
+    }
+    
+    private func createPaymentRequest() -> PKPaymentRequest {
+        let request = PKPaymentRequest()
+        request.merchantIdentifier = "merchant.ru.krasabs.izba"
+        request.supportedNetworks = [.visa, .masterCard]
+        request.merchantCapabilities = .capability3DS
+        request.countryCode = "RU"
+        request.currencyCode = "RUB"
+        let amount = NSDecimalNumber(string: finalSumLabel.text)
+        request.paymentSummaryItems = [PKPaymentSummaryItem(label: "Покупка билетов через Парковед", amount: amount)]
+        return request
     }
     
     @IBAction func minusTapAction(sender: UITapGestureRecognizer) {
@@ -89,27 +118,40 @@ class ServiceDetailVC: FrameVC {
         countFinalSum()
     }
     
-    func countFinalSum() {
-        let price = 450
-        let childrenPrice = 250
+    private func countFinalSum() {
+        let price = service.price
+        let childrenPrice = service.price - 100
         let sum = price * count + childrenPrice * childrenCount
         finalSumLabel.text = "\(sum) ₽"
     }
 }
 
+// MARK: - work with colletionView
 extension ServiceDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
-    func setupImageCollection() {
-        imageCollection.delegate = self
-        imageCollection.dataSource = self
-        imageCollection.register(UINib(nibName: "ServiceDetailCell", bundle: nil), forCellWithReuseIdentifier: "ServiceDetailCell")
+    private func setupCollectionView(_ collectionView: UICollectionView) {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: "ServiceDetailCell", bundle: nil), forCellWithReuseIdentifier: "ServiceDetailCell")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceDetailCell", for: indexPath) as! ServiceDetailCell
+        cell.serviceDetailImageView.downloaded(from: service.imageURL)
         return cell
+    }
+}
+
+// MARK: - work with paymentVC
+extension ServiceDetailVC: PKPaymentAuthorizationViewControllerDelegate {
+    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
+        controller.dismiss(animated: true)
+    }
+    
+    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
+        completion(PKPaymentAuthorizationResult(status: .success, errors: nil))
     }
 }

@@ -13,15 +13,19 @@ class ArticlesCollectionCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupArticlesCollection()
+        setupCell()
+    }
+    
+    private func setupCell() {
+        setupCollectionView(articlesCollection)
     }
 }
 
 extension ArticlesCollectionCell: UICollectionViewDelegate, UICollectionViewDataSource {
-    func setupArticlesCollection() {
-        articlesCollection.delegate = self
-        articlesCollection.dataSource = self
-        articlesCollection.register(UINib(nibName: "ArticleCell", bundle: nil), forCellWithReuseIdentifier: "ArticleCell")
+    func setupCollectionView(_ collectionView: UICollectionView) {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: "ArticleCell", bundle: nil), forCellWithReuseIdentifier: "ArticleCell")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

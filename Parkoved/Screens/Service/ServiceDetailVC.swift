@@ -42,6 +42,9 @@ class ServiceDetailVC: UIViewController {
         serviceDescription.text = service.serviceDescription
         priceLable.text = "\(service.price) ₽"
         childrenPriceLabel.text = "\(service.price - 100) ₽"
+        
+        let set: Set = [1, 2,3]
+        var filter = set.fil
     }
     
     private func addTaps() {

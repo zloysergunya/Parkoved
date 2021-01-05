@@ -36,11 +36,13 @@ class TicketsVC: UIViewController {
     }
     
     private func updateUI() {
-        dataProvider.updateServices() {
+        dataProvider.updateServices() { [weak self] in
+            guard let self = self else { return }
             self.services = self.dataProvider.getServices()
         }
         
-        dataProvider.updateTickets() {
+        dataProvider.updateTickets() { [weak self] in
+            guard let self = self else { return }
             self.tickets = self.dataProvider.getTickets()
             self.ticketsTable.reloadData()
         }
